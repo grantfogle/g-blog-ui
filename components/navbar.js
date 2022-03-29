@@ -98,7 +98,7 @@ const Navbar = () => {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                <Link href={page}>
+                                <Link href={page} >
                                     {page.toUpperCase()}
                                 </Link>
                             </Button>
