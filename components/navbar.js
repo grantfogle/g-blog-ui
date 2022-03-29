@@ -11,9 +11,9 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Link from 'next/link'
 
-const pages = ['Blog', 'Projects'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['blog', 'projects'];
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -98,7 +98,9 @@ const Navbar = () => {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
-                                {page}
+                                <Link href={page}>
+                                    {page.toUpperCase()}
+                                </Link>
                             </Button>
                         ))}
                     </Box>
