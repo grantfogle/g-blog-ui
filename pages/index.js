@@ -6,6 +6,8 @@ import ProTip from '../src/ProTip';
 import Link from '../src/Link';
 import Copyright from '../src/Copyright';
 
+import { getAllPostsForHome } from "../lib/api"
+
 export default function Index() {
   return (
     <Container maxWidth="sm">
