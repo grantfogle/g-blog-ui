@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { getAllPostsForHome } from "../../lib/api";
 
 
-function formatDates(unforDate) {      
+function formatDates(unforDate) {
     const newDate = new Date(unforDate);
     return `${newDate.getMonth() + 1}/${newDate.getDate()}/${newDate.getFullYear()}`;
 };
@@ -19,12 +19,12 @@ export default function Blog({ preview, allPosts }) {
                 return (
                     <div key={post.sys.id}>
                         <p>{formatDates(post.date)}</p>
-                        <Link href={`/blog/ + ${post.title}`}>
+                        <Link href={`/blog/ + ${post.title.toLowerCase().replace(/ /g, '-')}`}>
                             <h1>{post.title}</h1>
                         </Link>
                     </div>
-                )
-            })}
+        )
+    })}
         </Box>
     )
 }
