@@ -26,7 +26,7 @@ export default function Projects({ preview, allProjects }) {
   console.log(allProjects)
   return (
     <Box sx={{ width: '600px', minHeight: '80vh', p: 4, margin: '0 auto' }}>
-      <Typography variant="h1">Projects</Typography>
+      <Typography variant="h4" component="h1">Projects</Typography>
       {allProjects.map(project => {
         return (
           <Box key={project.sys.id} sx={{ borderBottom: '1px solid #dfdfdf' }}>

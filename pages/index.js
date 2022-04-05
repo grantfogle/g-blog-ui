@@ -27,20 +27,23 @@ function formatDates(unforDate) {
   return `${newDate.getMonth() + 1}/${newDate.getDate()}/${newDate.getFullYear()}`;
 };
 
-export default function Index({allPosts}) {
+export default function Index({ allPosts }) {
   console.log(allPosts)
   return (
     <Container maxWidth="sm">
       <Box sx={{ my: 4, minHeight: '80vh' }}>
-        <div>
         {allPosts.map(post => {
           return (
-            <Link href={"/blog/" + post.fields.slug}>
-              <h4>{formatDates(post.fields.date)} {post.fields.title}</h4>
-            </Link>
+            <Box key={post.sys.id} sx={{ mb: 2, display: 'flex', alignItems: 'end' }}>
+              <Typography sx={{ mr: 2 }} variant="body" component="p">{formatDates(post.fields.date)}</Typography>
+              <Link color="secondary" href={"blog" + '/' + post.fields.slug}>
+                <Box>
+                  <Typography variant="h6" component="h2">{post.fields.title}</Typography>
+                </Box>
+              </Link>
+            </Box>
           )
         })}
-        </div>
         {/* <Typography variant="h4" component="h1" gutterBottom>
           Next.js example
         </Typography>
