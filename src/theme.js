@@ -20,6 +20,13 @@ const theme = createTheme({
       main: red.A400,
     },
   },
+  // a: {
+  //   color: '#19857b',
+  //   textDecoration: 'none',
+  //   '&:hover': {
+  //     color: 'red'
+  //   }
+  // }
 });
 
 export default theme;

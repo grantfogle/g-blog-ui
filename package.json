@@ -10,12 +10,14 @@
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.12.0",
     "@emotion/cache": "latest",
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "contentful": "^9.1.18",
     "next": "^12.1.4",
     "prop-types": "latest",
     "react": "latest",
