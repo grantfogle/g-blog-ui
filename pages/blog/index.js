@@ -12,7 +12,7 @@ function formatDates(unforDate) {
 export default function Blog({ preview, allPosts }) {
 
     return (
-        <Box sx={{ width: '600px', height: '100%', p: 4, margin: '0 auto' }}>
+        <Box sx={{ width: '600px', minHeight: '80vh', p: 4, margin: '0 auto' }}>
             {allPosts.map(post => {
                 return (
                     <div key={post.sys.id}>

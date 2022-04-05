@@ -32,12 +32,11 @@ export default function Index({allPosts}) {
   console.log(allPosts)
   return (
     <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
+      <Box sx={{ my: 4, minHeight: '80vh' }}>
         <div>
         {allPosts.map(post => {
           return (
             <Link href={"/blog/" + post.fields.slug}>
-
               <h4>{formatDates(post.fields.date)} {post.fields.title}</h4>
             </Link>
           )

@@ -8,7 +8,7 @@ import { flexbox } from '@mui/system';
 
 export default function Layout({ children }) {
     return (
-        <Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column'}}>
             <Navbar />
             <main>{children}</main>
             <Footer />

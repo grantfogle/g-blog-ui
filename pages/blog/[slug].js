@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+import Typography from '@mui/material/Typography';
 
 let client = require('contentful').createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -32,11 +33,19 @@ export async function getStaticProps({params}) {
     }
 }
 
+function formatDates(unforDate) {
+    const newDate = new Date(unforDate);
+    return `${newDate.getMonth() + 1}/${newDate.getDate()}/${newDate.getFullYear()}`;
+  };
+
 export default function BlogPage({blog}) {
     console.log('blog', blog)
     return (
-        <Box sx={{ width: '100%', height: '100%', p: 4, margin: '0 auto' }}>
-            <h1>{blog.fields.title}</h1>
+        <Box sx={{ width: '100%', minHeight: '80vh', p: 4, margin: '0 auto' }}>
+            <Typography variant="h1" sx={{fontSize: '48px'}}>{blog.fields.title}</Typography>
+            {/* <img src={blog.fields.headerImage.fields} alt="{img-alt-tag}" width="400" height="400"> */}
+            {/* <div>{documentToReactComponents(blog.fields.headerImage)}</div> */}
+            <Typography>{formatDates(blog.fields.date)}</Typography>
             <div>{documentToReactComponents(blog.fields.blogContent)}</div>
         </Box>
     )
