@@ -43,8 +43,6 @@ export default function BlogPage({blog}) {
     return (
         <Box sx={{ width: '100%', minHeight: '80vh', p: 4, margin: '0 auto' }}>
             <Typography variant="h1" sx={{fontSize: '48px'}}>{blog.fields.title}</Typography>
-            {/* <img src={blog.fields.headerImage.fields} alt="{img-alt-tag}" width="400" height="400"> */}
-            {/* <div>{documentToReactComponents(blog.fields.headerImage)}</div> */}
             <Typography>{formatDates(blog.fields.date)}</Typography>
             <div>{documentToReactComponents(blog.fields.blogContent)}</div>
         </Box>

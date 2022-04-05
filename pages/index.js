@@ -14,8 +14,7 @@ let client = require('contentful').createClient({
 export async function getStaticProps() {
   let data = await client.getEntries({
     content_type: 'blogPost',
-  })  
-  console.log('bing')
+  });
   return {
     props: {
       allPosts: data.items
