@@ -76,11 +76,11 @@ const Navbar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Link href='projects' >
+                                    <Typography textAlign="center">Projects</Typography>
+                                </Link>
+                            </MenuItem>
                         </Menu>
                     </Box>
                     <Typography
@@ -92,19 +92,15 @@ const Navbar = () => {
                         Grant Fogle
           </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                <Link href={page} >
-                                    {page.toUpperCase()}
-                                </Link>
-                            </Button>
-                        ))}
+                        <Button
+                            onClick={handleCloseNavMenu}
+                            sx={{ my: 2, color: 'white', display: 'block' }}
+                        >
+                            <Link href='projects'>
+                                <Typography color="secondary" variant="body1" component="h6">Projects</Typography>
+                            </Link>
+                        </Button>
                     </Box>
-
                 </Toolbar>
             </Container>
         </AppBar>
