@@ -16,6 +16,7 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "contentful": "^9.1.18",
     "next": "^12.1.4",
     "prop-types": "latest",
     "react": "latest",
