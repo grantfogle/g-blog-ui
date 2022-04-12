@@ -36,7 +36,7 @@ export default function Index({ allPosts }) {
           return (
             <Box key={post.sys.id} sx={{ mb: 2, display: 'flex', alignItems: 'end' }}>
               <Typography sx={{ mr: 2 }} variant="body" component="p">{formatDates(post.fields.date)}</Typography>
-              <Link color="secondary" href={"blog" + '/' + post.fields.slug}>
+              <Link color="secondary" href={"/blog" + '/' + post.fields.slug}>
                 <Box>
                   <Typography variant="h6" component="h2">{post.fields.title}</Typography>
                 </Box>

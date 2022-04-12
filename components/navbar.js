@@ -44,8 +44,12 @@ const Navbar = () => {
                         component="div"
                         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                     >
-                        Grant Fogle
-          </Typography>
+                        <Link href="/">
+                            <Typography variant="h6" color="secondary">
+                                Grant Fogle
+                            </Typography>
+                        </Link>
+                    </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -77,26 +81,28 @@ const Navbar = () => {
                             }}
                         >
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <Link href='projects' >
+                                <Link href='/projects' >
                                     <Typography textAlign="center">Projects</Typography>
                                 </Link>
                             </MenuItem>
                         </Menu>
                     </Box>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                    >
-                        Grant Fogle
-          </Typography>
+
+                    <Link href="/">
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            color="secondary"
+                            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+                        >Grant Fogle</Typography>
+                    </Link>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: 'end' } }}>
                         <Button
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
                         >
-                            <Link href='projects'>
+                            <Link href='/projects'>
                                 <Typography color="secondary" variant="body1" component="h6">Projects</Typography>
                             </Link>
                         </Button>

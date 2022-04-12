@@ -43,7 +43,7 @@ function projectBox(project) {
   return (
     <Box>
       <Typography variant="h2">{name}</Typography>
-      <Typography variant="body1">{documentToReactComponents(description)}</Typography>
+      <Box>{documentToReactComponents(description)}</Box>
       <Box>
         <Button variant="text" sx={{ textAlign: 'center' }}>
           <a href={githubUrl}>
